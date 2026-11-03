@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 3 no 1"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-24 05:22:34 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDgtMjQ7MTA6MTU6NTMgQU07MTc5OA=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMjQ7MDU6MjI6MzQgUE07MjsxOTIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil" type="Integer" array="False" size=""/>
+            <declare name="cek" type="Boolean" array="False" size=""/>
+            <output expression="&quot;masukan bilangan yg akan di cek apakah genap &quot;" newline="True"/>
+            <input variable="bil"/>
+            <assign variable="cek" expression="bil%2==0"/>
+            <if expression="cek">
+                <then>
+                    <output expression="&quot;True&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;False&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

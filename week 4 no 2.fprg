@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 4 no 2"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-31 01:20:44 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDE6MTU6NDEgUE07MTgwOA=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDE6MjA6NDQgUE07MTsxOTE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, total, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan nilai n&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="total" expression="0"/>
+            <assign variable="b" expression="n/3"/>
+            <for variable="i" start="1" end="b" direction="inc" step="2">
+                <assign variable="total" expression="total+i*3"/>
+            </for>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

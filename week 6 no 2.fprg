@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 6 no 2"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-14 01:35:25 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDE6MTE6MDMgUE07MTgwNA=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDE6MzU6MjUgUE07MTsxOTIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan panjang array!&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="data" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="data[i]" expression="random(10)"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="data[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="maxFreq(data,n)" newline="True"/>
+        </body>
+    </function>
+    <function name="maxFreq" type="Integer" variable="modus">
+        <parameters>
+            <parameter name="data" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="modus, max, i, j" type="Integer" array="False" size=""/>
+            <declare name="freq" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="freq[i]" expression="1"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                    <if expression="data[i]==data[j]">
+                        <then>
+                            <assign variable="freq[i]" expression="freq[i]+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <assign variable="modus" expression="1"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="freq[i]&gt;modus">
+                    <then>
+                        <assign variable="modus" expression="freq[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

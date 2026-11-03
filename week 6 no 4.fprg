@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 6 no 4"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-14 02:48:59 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDI6MzI6MTEgUE07MTgwNw=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDI6NDg6NTkgUE07MTsxOTM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan panjang array&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="x" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="x[i]" expression="random(10)+1"/>
+            </for>
+            <call expression="kurangNilaiMin(x,n)"/>
+        </body>
+    </function>
+    <function name="kurangNilaiMin" type="Integer" variable="ans">
+        <parameters>
+            <parameter name="x" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ans, i" type="Integer" array="False" size=""/>
+            <assign variable="ans" expression="x[0]"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="ans" expression="MIN(ans,x[i])"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="x[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;nilai minimal &quot;&amp;ans" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="x[i]" expression="x[i]-ans"/>
+                <output expression="x[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+    <function name="MIN" type="Integer" variable="min">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="min" type="Integer" array="False" size=""/>
+            <if expression="a&lt;=b">
+                <then>
+                    <assign variable="min" expression="a"/>
+                </then>
+                <else>
+                    <assign variable="min" expression="b"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

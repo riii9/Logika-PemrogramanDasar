@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="soal 2 logprog(2)"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-17 11:18:53 AM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDgtMTc7MTE6MDM6NDUgQU07MTc5OQ=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMTc7MTE6MTg6NTMgQU07MTsxOTEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="boolA, boolB, boolC, soalA, soalB, soalC, soalD" type="Boolean" array="False" size=""/>
+            <output expression="&quot;masukan boolA&quot;" newline="True"/>
+            <input variable="boolA"/>
+            <output expression="&quot;masukan boolB&quot;" newline="True"/>
+            <input variable="boolB"/>
+            <output expression="&quot;masukan boolC&quot;" newline="True"/>
+            <input variable="boolC"/>
+            <assign variable="soalA" expression="boolA &amp;&amp; boolB &amp;&amp; boolC"/>
+            <assign variable="soalB" expression="boolA &amp;&amp; boolB || boolC"/>
+            <assign variable="soalC" expression="boolA || boolB || boolC"/>
+            <assign variable="soalD" expression="boolA &amp;&amp; boolB || !boolC"/>
+            <output expression="&quot;A. boolA AND boolB AND boolC adalah --- &quot; &amp; soalA" newline="True"/>
+            <output expression="&quot;B. boolA AND boolB OR boolC adalah --- &quot; &amp; soalB" newline="True"/>
+            <output expression="&quot;C. boolA OR boolB OR boolC adalah --- &quot; &amp; soalC" newline="True"/>
+            <output expression="&quot;D. boolA AND boolB OR (NOT boolC) adalah --- &quot; &amp; soalD" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

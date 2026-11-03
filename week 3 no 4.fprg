@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 3 no 4"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-24 10:29:51 AM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDgtMjQ7MTA6Mjc6MDggQU07MTgwMQ=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMjQ7MTA6Mjk6NTEgQU07MTsxOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil" type="Integer" array="False" size=""/>
+            <declare name="cek" type="Boolean" array="False" size=""/>
+            <output expression="&quot;masukan bilangan yg akan dicek apakah kelipatan 3&quot;" newline="True"/>
+            <input variable="bil"/>
+            <assign variable="cek" expression="bil%3==0"/>
+            <if expression="cek">
+                <then>
+                    <output expression="&quot;bilangan &quot;&amp;bil&amp; &quot; habis dibagi 3&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;bilangan &quot;&amp;bil&amp; &quot; tidak habis dibagi 3&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

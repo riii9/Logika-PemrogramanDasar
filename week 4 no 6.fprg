@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 4 no 6"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-31 04:34:25 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDE6NTY6MjAgUE07MTgxMA=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDQ6MzQ6MjUgUE07MTsxOTIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, m, i, j, min" type="Integer" array="False" size=""/>
+            <output expression="&quot;entry nilai n&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;entry nilai m&quot;" newline="True"/>
+            <input variable="m"/>
+            <declare name="arr" type="Integer" array="True" size="n*m"/>
+            <for variable="i" start="0" end="n*m-1" direction="inc" step="1">
+                <assign variable="arr[i]" expression="random(n*m)"/>
+            </for>
+            <assign variable="min" expression="arr[0]"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="0" end="m-1" direction="inc" step="1">
+                    <output expression="arr[i*m+j]&amp;&quot; &quot;" newline="False"/>
+                    <if expression="arr[i*m+j]&lt;min">
+                        <then>
+                            <assign variable="min" expression="arr[i*m+j]"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="&quot; &quot;" newline="True"/>
+            </for>
+            <output expression="&quot;nilai minimum dari matrix berordo &quot;&amp; n&amp;&quot;x&quot;&amp;m&amp;&quot; adalah &quot;&amp;min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

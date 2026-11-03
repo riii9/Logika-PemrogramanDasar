@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 5 no 2"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-07 03:44:08 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDktMDc7MTA6MjU6MTggQU07MTgwMg=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDktMDc7MDM6NDQ6MDggUE07MjsxOTI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, b" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="b" expression="n/3"/>
+            <output expression="&quot;-------for--------&quot;" newline="True"/>
+            <for variable="i" start="1" end="b" direction="inc" step="1">
+                <if expression="i%4!=0">
+                    <then>
+                        <output expression="i * 3 &amp;&quot; &quot;" newline="False"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;-------while---------&quot;" newline="True"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i&lt;=b">
+                <if expression="i%4!=0">
+                    <then>
+                        <output expression="i * 3 &amp;&quot; &quot;" newline="False"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

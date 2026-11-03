@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 6 no 1"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-14 06:26:02 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDE6MDc6MTcgUE07MTgxNA=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDY6MjY6MDIgUE07MjsxOTIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan nilai yg mau dicek genap!&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="isEven(n)">
+                <then>
+                    <output expression="&quot;true-bilangan genap&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;false-bukan bilangan genap&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="isEven" type="Boolean" variable="even">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="even" type="Boolean" array="False" size=""/>
+            <if expression="n%2==0">
+                <then>
+                    <assign variable="even" expression="true"/>
+                </then>
+                <else>
+                    <assign variable="even" expression="false"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

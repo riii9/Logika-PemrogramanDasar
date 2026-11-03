@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 5 no 4"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-07 02:55:46 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDktMDc7MDI6MjM6NTMgUE07MTgxNQ=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDktMDc7MDI6NTU6NDYgUE07MTsxOTMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, var9, temp, batas" type="Integer" array="False" size=""/>
+            <declare name="arr" type="Integer" array="True" size="10"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;masukan nilai array ke-&quot;&amp;i+1" newline="True"/>
+                <input variable="arr[i]"/>
+            </for>
+            <output expression="&quot;array masih acak&quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="arr[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+            <assign variable="var9" expression="arr[9]"/>
+            <assign variable="batas" expression="0"/>
+            <while expression="var9 &gt; arr[batas]">
+                <assign variable="batas" expression="batas+1"/>
+            </while>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot;array yang sudah urut, tepatnya elemen ke 10 berada pada urutan ke &quot; &amp; batas+1" newline="True"/>
+            <for variable="i" start="0" end="batas-1" direction="inc" step="1">
+                <output expression="arr[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="var9 &amp;&quot; &quot;" newline="False"/>
+            <for variable="i" start="batas" end="8" direction="inc" step="1">
+                <output expression="arr[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 4 no 5"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-31 01:56:18 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDE6NTA6NTYgUE07MTgxMw=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDE6NTY6MTggUE07MTsxOTI1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, max" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="arr" type="Integer" array="True" size="n"/>
+            <output expression="&quot;[&quot;" newline="False"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="arr[i]" expression="random(n)"/>
+                <output expression="arr[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;]&quot;" newline="True"/>
+            <assign variable="max" expression="arr[0]"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="arr[i]&gt;max">
+                    <then>
+                        <assign variable="max" expression="arr[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

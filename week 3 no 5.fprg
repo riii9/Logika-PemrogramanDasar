@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 3 no 5"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-24 10:33:32 AM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDgtMjQ7MTA6MzA6MTggQU07MTc5Ng=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMjQ7MTA6MzA6MjIgQU07MTtNIFMgSTtNU0k7MjAyNi0wOC0yNDsxMDoyNzowOCBBTTt3ZWVrIDMgbm8gNC5mcHJnOzUxNDM="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMjQ7MTA6MzM6MzIgQU07MTsxOTAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan bilangan yg akan dicek&quot;" newline="True"/>
+            <input variable="bil"/>
+            <if expression="bil%3==0&amp;&amp;bil%4==0">
+                <then>
+                    <output expression="&quot;bilangan &quot;&amp;bil&amp; &quot; habis dibagi 3 dan habis dibagi 4&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="bil%3==0&amp;&amp;bil%4!=0">
+                        <then>
+                            <output expression="&quot;bilangan &quot;&amp;bil&amp; &quot; habis dibagi 3 dan tidak habis dibagi 4&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;bilangan &quot;&amp;bil&amp; &quot; tidak habis dibagi 3 dan tidak habis dibagi 4&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

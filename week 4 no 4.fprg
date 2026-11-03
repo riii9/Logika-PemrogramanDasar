@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 4 no 4"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-31 01:50:44 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDE6MzY6MTggUE07MTgxNQ=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDE6MzY6MjIgUE07MTtNIFMgSTtNU0k7MjAyNi0wOC0zMTswMToyMDo0NyBQTTt3ZWVrIDQgbm8gMy5mcHJnOzUxNzE="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDgtMzE7MDE6NTA6NDQgUE07MTsxOTE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, total1, temp" type="Integer" array="False" size=""/>
+            <declare name="mean, total2, varian" type="Real" array="False" size=""/>
+            <assign variable="total1" expression="0"/>
+            <assign variable="total2" expression="0"/>
+            <output expression="&quot;masukan nilai n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="arr" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="temp" expression="random(n)"/>
+                <assign variable="total1" expression="total1+temp"/>
+                <assign variable="arr[i]" expression="temp"/>
+            </for>
+            <assign variable="mean" expression="total1/n"/>
+            <output expression="&quot;rata-ratanya &quot;&amp; mean" newline="True"/>
+            <output expression="&quot;[&quot;" newline="False"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="total2" expression="total2+(arr[i]-mean)^2"/>
+                <output expression="arr[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;]&quot;" newline="True"/>
+            <assign variable="varian" expression="total2/(n-1)"/>
+            <output expression="&quot;variannya &quot;&amp; varian" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="week 6 no 3"/>
+        <attribute name="authors" value="M S I"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-14 06:31:14 PM"/>
+        <attribute name="created" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDI6MDk6NDggUE07MTgyMQ=="/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDI6MTQ6NDggUE07MTtNIFMgSTtNU0k7MjAyNi0wOS0xNDswMToxMTowMyBQTTszNzg4"/>
+        <attribute name="edited" value="TSBTIEk7TVNJOzIwMjYtMDktMTQ7MDY6MzE6MTQgUE07MjsxOTIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, idx, ans" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan panjang array!&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="x" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="x[i]" expression="random(10)"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="x[i]&amp;&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <assign variable="ans" expression="maxIndex(x,n)"/>
+            <output expression="&quot;elemen array terbesar terdapat pada index ke:&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="x[i]==ans">
+                    <then>
+                        <output expression="i+1&amp;&quot; &quot;" newline="False"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="MAX" type="Integer" variable="ans">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ans" type="Integer" array="False" size=""/>
+            <if expression="a&gt;=b">
+                <then>
+                    <assign variable="ans" expression="a"/>
+                </then>
+                <else>
+                    <assign variable="ans" expression="b"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="maxIndex" type="Integer" variable="ans">
+        <parameters>
+            <parameter name="x" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ans, i, maks" type="Integer" array="False" size=""/>
+            <assign variable="maks" expression="x[0]"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="maks" expression="MAX(maks,x[i])"/>
+            </for>
+            <assign variable="ans" expression="maks"/>
+        </body>
+    </function>
+</flowgorithm>
